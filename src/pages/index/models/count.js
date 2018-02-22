@@ -12,7 +12,9 @@ export default {
   subscriptions: {
     setup({ dispatch, history }) {
       return history.listen(({ pathname, query }) => {
-        console.log(history);
+        if (pathname === '/') {
+          console.log(history);
+        }
       });
     },
   },
